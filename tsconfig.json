@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "sourceMap": true,
+    "sourceMap": false,
     "outDir": "./public/js",
     "rootDir": "./src",
+    "noImplicitAny": true,
   },
   "include": [
     "./src/**/*.ts"
