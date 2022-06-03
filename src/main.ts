@@ -97,9 +97,7 @@ const updateLocalStorage = (id: string): void => {
 
 const update = (id: string): void => {
   const quantity = document.getElementById(id) as HTMLDivElement;
-  const localData: BasketItem[] =
-    JSON.parse(localStorage.getItem('data') || '[]');
-  const search = localData.find(item => item.id === id);
+  const search = basket.find(item => item.id === id);
 
   if (search) {
     quantity.innerText = search.item.toString();
@@ -112,11 +110,9 @@ const update = (id: string): void => {
 
 const calculation = (): void => {
   const cartIcon = document.getElementById('cartAmount') as HTMLDivElement;
-  const localData: BasketItem[] =
-    JSON.parse(localStorage.getItem('data') || '[]');
   let sum = 0;
 
-  localData.map(item => sum += item.item);
+  basket.map(item => sum += item.item);
 
   cartIcon.innerText = sum.toString();
 }
