@@ -10,10 +10,17 @@
 
 body {
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column; 
 }
 
 i {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /**
@@ -107,4 +114,90 @@ i {
 
 .bi-plus-lg {
   color: #008000;
+}
+
+/**
+* ! Style rules for label and some buttons
+**/
+
+#label {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.HomeBtn, .checkout, .removeAll {
+  background-color: #212529;
+  color: #fff;
+  border: 0;
+  padding: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.checkout {
+  background-color: #008000;
+}
+
+.removeAll {
+  background-color: #ff0000;
+  margin-left: 5px;
+}
+
+.bi-x-lg {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+/**
+* ! Style rules for shopping-cart
+**/
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  align-self: center;
+  gap: 30px;
+}
+
+/**
+* ! Style rules for cart-item
+**/
+
+.cart-item {
+  border: 2px solid #212529;
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+}
+
+.cart-item img {
+  width: 100px;
+}
+
+.details {
+  flex: 1;
+}
+
+.title-price-x {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-price {
+  background-color: #212529;
+  color: #fff;
+  border-radius: 4px;
+  padding: 3px 6px;
 }

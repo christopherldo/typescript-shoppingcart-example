@@ -22,20 +22,20 @@ const generateShop = (): HTMLDivElement[] => {
     const quantity = document.createElement('div');
     const buttonPlus = document.createElement('i');
 
-    item.id = `product-id-${id}`;
     item.classList.add('item');
     details.classList.add('details');
     priceQuantity.classList.add('price-quantity');
     buttons.classList.add('buttons');
     buttonMinus.classList.add('bi', 'bi-dash-lg');
-    quantity.id = id;
     quantity.classList.add('quantity');
     buttonPlus.classList.add('bi', 'bi-plus-lg');
-
+    
+    item.id = `product-id-${id}`;
     image.src = img;
     title.innerText = name;
     description.innerText = desc;
     priceItem.innerText = `$${price}`;
+    quantity.id = id;
     quantity.innerText = '0';
     
     buttonMinus.onclick = () => decrement(id);
